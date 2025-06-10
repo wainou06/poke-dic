@@ -1,0 +1,128 @@
+.header .moblemedia {
+   display: none;
+}
+
+.moblemedia .main-logo {
+   height: 60px;
+}
+
+.moblemedia .main-logo img {
+   height: 100%;
+}
+
+.moblemedia .icons .icon {
+   font-size: 35px;
+   margin: 0 10px 0 0;
+   color: #393939;
+}
+
+.moblemedia .menu {
+   width: 60px;
+   height: 60px;
+   color: #fff;
+   background-color: black;
+   border-radius: 0 10px 0 0;
+   font-size: 25px;
+   line-height: 60px;
+}
+
+.mobile-menu {
+   display: none;
+   background-color: black;
+   text-align: center;
+}
+
+.mobile-menu input {
+   width: 50%;
+   height: 30px;
+}
+
+.header .pcmedia {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.pcmedia .container {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu .menu-list {
+   display: flex;
+   justify-content: space-around;
+}
+
+.menu-list li {
+   padding: 10px;
+}
+
+.login .list {
+   display: flex;
+   justify-content: space-around;
+}
+
+.list li {
+   padding: 10px;
+}
+
+.sub-logo {
+   max-width: 100px;
+   height: 100px;
+   background-color: yellow;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.sub-logo a img {
+   width: 90%;
+}
+
+.pc-menu {
+   display: flex;
+   background-color: black;
+   justify-content: center;
+   padding: 10px;
+}
+
+.pc-menu input {
+   width: 50%;
+   height: 30px;
+}
+
+.catch {
+   background-color: #393939;
+   border: none;
+   width: 10%;
+   background-image: url('../images/icon_ball_b.png');
+   background-repeat: no-repeat;
+   background-position: center;
+   cursor: pointer;
+}
+
+@media (min-width: 500px) and (max-width: 950px) {
+   .header .pcmedia {
+      display: none;
+   }
+
+   .pc-menu {
+      display: none;
+   }
+
+   .header .moblemedia {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .mobile-menu {
+      display: flex;
+      background-color: black;
+      justify-content: center;
+      padding: 10px;
+   }
+}
