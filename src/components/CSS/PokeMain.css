@@ -21,6 +21,10 @@
    margin: 10px;
 }
 
+.cards li img {
+   width: 250px;
+}
+
 .black-filter {
    filter: grayscale(100%);
 }

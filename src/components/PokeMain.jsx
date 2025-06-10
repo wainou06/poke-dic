@@ -12,7 +12,7 @@ function PokeMain({ pokemons, onBlack, onEvolve, onRemove }) {
                      <div onDoubleClick={() => onBlack(poke.id)}>
                         <img className={poke.isBlack ? 'black-filter' : ''} src={img} alt={name} />
                         <p className={poke.isBlack ? 'gray' : 'black'}>{name}</p>
-                        <button className="evolve" onClick={() => onEvolve(poke.id)} onDoubleClick={(e) => e.stopPropagation()}>
+                        <button className="evolve" onClick={() => onEvolve(poke.id)}>
                            진화
                         </button>
                         <button className="remove" onClick={() => onRemove(poke.id)}>

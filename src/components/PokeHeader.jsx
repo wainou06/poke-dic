@@ -38,7 +38,7 @@ function PokeHeader({ inputValue, onInputChange, onAdd }) {
                </div>
             </div>
             <div className="sub-logo">
-               <a href="#">
+               <a>
                   <img src={sub_logo} alt="스토어 로고" />
                </a>
             </div>

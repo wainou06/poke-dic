@@ -58,7 +58,11 @@ function App() {
 
    const handleAdd = useCallback(() => {
       const name = inputValue.trim()
-      if (!name) return
+      if (!name) {
+         alert('1단계 포켓몬 이름을 입력해주세요. (진화 전)')
+         setInputValue('')
+         return
+      }
 
       if (pokemons.some((p) => p.steps[0].name === name)) {
          alert('이미 등록된 포켓몬입니다.')
@@ -68,7 +72,7 @@ function App() {
 
       const evo = evolutionMap[name]
       if (!evo) {
-         alert('1단계 포켓몬 이름을 입력해주세요.')
+         alert('1단계 포켓몬 이름을 입력해주세요. (진화 전)')
          setInputValue('')
 
          return
@@ -86,6 +90,7 @@ function App() {
          isBlack: false,
       }
 
+      alert(`${name}, 넌 내 거야!`)
       setPokemons([...pokemons, newPokemon])
       setNextId((prev) => prev + 1)
       setInputValue('')
@@ -93,6 +98,7 @@ function App() {
 
    const handleRemove = useCallback((id) => {
       setPokemons((prev) => prev.filter((p) => p.id !== id))
+      alert(`잘 가, 그동안 즐거웠어!`)
    }, [])
 
    const onEvolve = useCallback((id) => {
@@ -101,11 +107,13 @@ function App() {
             if (poke.id === id) {
                const nextStep = poke.currentStep + 1
                const maxStep = poke.steps.length - 1
-
                if (nextStep > maxStep) {
                   alert('진화 끝!')
                   return poke
                }
+
+               alert(`어라? 포켓몬의 모습이?!`)
+               alert('진화~!')
 
                return {
                   ...poke,

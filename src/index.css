@@ -20,3 +20,10 @@ p {
    margin: 0;
    padding: 0;
 }
+
+li,
+p,
+a,
+div {
+   user-select: none;
+}
